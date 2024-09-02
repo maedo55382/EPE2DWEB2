@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Tareas</h1>
+        </header>
+        <main>
+            <!-- Sección para crear tarea -->
+            <section id="taskSection">
+                <h2>Crear Tarea</h2>
+                <form id="taskForm">
+                    <label for="taskName">Nombre de la tarea:</label>
+                    <input type="text" id="taskName" placeholder="Ingrese el nombre de la tarea" required>
+
+                    <label for="startDate">Fecha de inicio:</label>
+                    <input type="date" id="startDate" required>
+
+                    <label for="endDate">Fecha de fin:</label>
+                    <input type="date" id="endDate" required>
+
+                    <label for="assignee">Asignar a:</label>
+                    <input type="text" id="assignee" placeholder="Ingrese el nombre del asignado" required>
+
+                    <button type="submit">Guardar Tarea</button>
+                </form>
+            </section>
+
+            <!-- Sección para listar tareas -->
+            <section id="taskListSection">
+                <h2>Listado de Tareas</h2>
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Fecha de Inicio</th>
+                            <th>Fecha de Fin</th>
+                            <th>Asignado a</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de la tabla serán añadidas por JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Sección para reportes -->
+            <section id="reportSection">
+                <h2>Generar Reporte</h2>
+                <button id="generateReport">Generar Reporte</button>
+                <canvas id="taskChart" width="400" height="200"></canvas>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Empresa de Software - Gestión de Tareas</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
